@@ -1,0 +1,111 @@
+
+
+body {
+  background:linear-gradient(to left, #e9b15d,#FF9800);
+ 
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: linear-gradient(#ffffff);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+h2 {
+  text-align: center;
+  color: #e25822;
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="Name"], input[type="confirmed password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #D32F2F;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #e02727;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.options button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #FBC02D;
+}
+
+.message {
+  text-align: center;
+  color: #e02727;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.social-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-btn {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.method-selection {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.method-btn {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.method-icon {
+  width: 40px;
+  height: 40px;
+}

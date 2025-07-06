@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil del Usuario - Urban Heat Alert</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/perfil.css">
+</head>
+<body>
+
+<div class="perfil-contenedor">
+  
+  <div class="perfil-navegacion">
+    <button class="btn-volver" onclick="window.location.href='menu.html'">← Volver</button>
+    <button class="btn-cambiar" onclick="window.location.href='cambiar_perfil.html'">Editar perfil →</button>
+  </div>
+
+  <main class="seccion-principal">
+    <header class="header">
+      <h1 class="titulo">PERFIL DEL USUARIO</h1>
+    </header>
+
+    <div class="rectangulo">
+      
+      <div class="imagen-perfil">
+        <img src="assets/images/profile.png" alt="Imagen de perfil del usuario">
+      </div>
+
+      <div class="datos-perfil">
+
+        <article class="info-bloque">
+          <h2>Datos del Usuario</h2>
+          <div class="dato-item">
+            <span class="etiqueta">Nombre:</span>
+            <span class="valor" id="Unombre"></span>
+          </div>
+          <div class="dato-item">
+            <span class="etiqueta">Edad:</span>
+            <span class="valor" id="edad"></span>
+          </div>
+          <div class="dato-item">
+            <span class="etiqueta">Correo:</span>
+            <span class="valor" id="Uemail"></span>
+          </div>
+          <div class="dato-item">
+            <span class="etiqueta">Teléfono:</span>
+            <span class="valor" id="Utelefono"></span>
+          </div>
+          <div class="dato-item">
+            <span class="etiqueta">Ubicación:</span>
+            <span class="valor" id="ubicacion"></span>
+          </div>
+        </article>
+
+        <article class="info-bloque">
+          <h2>Contacto de Emergencia</h2>
+          <div class="dato-item">
+            <span class="etiqueta">Nombre:</span>
+            <span class="valor" id="emergencia-nombre"></span>
+          </div>
+          <div class="dato-item">
+            <span class="etiqueta">Teléfono:</span>
+            <span class="valor" id="emergencia-telefono"></span>
+          </div>
+          <div class="dato-item">
+            <span class="etiqueta">Relación:</span>
+            <span class="valor" id="emergencia-relacion"></span>
+          </div>
+        </article>
+        
+        <article class="info-bloque">
+            <h2>Configuración</h2>
+            <div class="dato-item">
+              <span class="etiqueta">Notificaciones:</span>
+              <div class="interruptor-contenedor">
+                  <input type="checkbox" id="notificaciones-toggle" class="interruptor-checkbox" checked>
+                  <label for="notificaciones-toggle" class="interruptor-etiqueta"></label>
+                  <span class="interruptor-texto">Activadas</span>
+              </div>
+            </div>
+            <div class="dato-item">
+              <span class="etiqueta">Modo Oscuro:</span>
+              <div class="interruptor-contenedor">
+                <input type="checkbox" id="modo-oscuro-toggle" class="interruptor-checkbox">
+                <label for="modo-oscuro-toggle" class="interruptor-etiqueta"></label>
+                <span class="interruptor-texto modo-oscuro-texto">Desactivado</span>
+              </div>
+            </div>
+            <div class="dato-item selector-idioma">
+              <label for="idioma" class="etiqueta">Idioma:</label>
+              <div class="control-idioma">
+                <select id="idioma">
+                  <option value="es">Español</option>
+                  <option value="en">Inglés</option>
+                </select>
+                <button class="cambiar" onclick="mostrarErrorIdioma()">Cambiar</button>
+              </div>
+            </div>
+        </article>
+        
+      </div>
+    </div>
+  </main>
+
+</div>
+
+<script src="assets/scripts/perfil.js"></script>
+
+</body>
+</html>

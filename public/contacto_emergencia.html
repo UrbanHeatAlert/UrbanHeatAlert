@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Contacto de Emergencia</title>
+
+  <!-- Fuente letra -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/styles/contacto_emergencia.css">
+</head>
+<body>
+    <!-- Boton Volver -->
+     <button class="btn-volver" onclick="window.location.href='cambiar_perfil.html'">← Volver</button>
+     
+     <!-- Contenedor principal -->
+     <div class="container">
+         <h1>Editar Contacto de Emergencia</h1>
+         
+         <!-- Formulario -->
+          <form class="formulario">
+            <label for="contacto-nombre">Nombre:</label>
+            <input type="text" id="contacto-nombre" placeholder="Nombre completo">
+            
+            <label for="contacto-telefono">Teléfono:</label>
+            <input type="tel" id="contacto-telefono" placeholder="Número de Teléfono">
+
+            <label for="contacto-relacion">Relación:</label>
+            <input type="text" id="contacto-relacion" placeholder="Madre, Padre, etc">
+
+      <button type="button" onclick="guardarContactoEmergencia()">Guardar Contacto</button>
+    </form>
+  </div>
+
+  <script src="assets/scripts/contacto_emergencia.js"></script>
+</body>
+</html>

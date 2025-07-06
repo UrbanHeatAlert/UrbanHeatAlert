@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alertas - Urban Heat Alert</title>
+    <link rel="icon" href="assets/images/UrbanHeatAlert_Logo.png" type="image/png">
+    <link rel="stylesheet" href="assets/styles/alertas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/images/UrbanHeatAlert_Logo.png" alt="Logo Urban Heat Alert">
+      </div>
+      
+      <button class="menu-hamburguesa" aria-label="Abrir menú">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="menu.html">Inicio</a></li>
+        <li><a href="alertas.html">Alertas</a></li>
+        <li><a href="recomendaciones.html">Recomendaciones</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="educacion.html">Educación</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="perfil.html" class="perfil-link">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="alertas-contenedor">
+
+      <div class="encabezado-pagina">
+          <h1>Panel de Alertas</h1>
+          <p>Consulta las alertas de calor activas y el historial reciente para tu zona.</p>
+      </div>
+
+      <section class="alertas-en-tiempo-real" aria-live="polite">
+        <h2>ALERTAS EN TIEMPO REAL</h2>
+        
+        <div class="alerta-tarjeta nivel-rojo">
+          <div class="tarjeta-icono">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path></svg>
+          </div>
+          <div class="tarjeta-info">
+            <span class="etiqueta-nivel">ALERTA ROJA</span>
+            <h3>Peligro Alto en <strong>Lima Centro</strong></h3>
+            <div class="datos-principales">
+              <p>Temperatura: <strong>38°C</strong></p>
+              <p>Sensación Térmica: <strong>42°C</strong></p>
+            </div>
+            <p class="recomendacion-rapida">Recomendación: Evite toda exposición al sol y manténgase hidratado.</p>
+          </div>
+          <div class="tarjeta-pie">
+            <p>Emitida: <time datetime="2025-07-05T10:30:00">5 de Julio, 2025 - 10:30 AM</time></p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="historial-alertas">
+        <h2>HISTORIAL DE ALERTAS</h2>
+
+        <div class="alerta-tarjeta nivel-naranja">
+           <div class="tarjeta-icono">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path></svg>
+          </div>
+          <div class="tarjeta-info">
+            <span class="etiqueta-nivel">ALERTA NARANJA</span>
+            <h3>Precaución en <strong>Carabayllo</strong></h3>
+             <div class="datos-principales">
+              <p>Temperatura: <strong>35°C</strong></p>
+              <p>Sensación Térmica: <strong>38°C</strong></p>
+            </div>
+          </div>
+          <div class="tarjeta-pie">
+            <p>Finalizada: <time datetime="2025-07-04T18:00:00">4 de Julio, 2025 - 06:00 PM</time></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="agregar-alerta">
+        <h2>Reportar una Medición de Temperatura</h2>
+        <p>¿Detectaste una temperatura alta en tu zona? Ayúdanos a mapear el calor en la ciudad.</p>
+        <form id="agregar-alerta-form">
+            <div class="form-grupo">
+              <label for="direccion">Dirección o Distrito</label>
+              <input type="text" id="direccion" name="direccion" placeholder="Ej: Av. Arequipa, Miraflores" required>
+            </div>
+            <div class="form-grupo">
+              <label for="temperatura">Temperatura Observada (°C)</label>
+              <input type="number" id="temperatura" name="temperatura" placeholder="Ej: 36" required>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Reporte</button>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Urban Heat Alert | Políticas de privacidad | Términos de uso</p>
+  </footer>
+
+  <script src="assets/scripts/alertas.js"></script>
+  <script src="assets/scripts/main.js"></script>
+  <script src="assets/scripts/modo-oscuro.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Heat Alert - Recomendaciones</title>
+  <link rel="icon" href="assets/images/UrbanHeatAlert_Logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/recomendaciones.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/images/UrbanHeatAlert_Logo.png" alt="Logo Urban Heat Alert">
+      </div>
+
+      <button class="menu-hamburguesa" aria-label="Abrir menú">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="menu.html">Inicio</a></li>
+        <li><a href="alertas.html">Alertas</a></li>
+        <li><a href="recomendaciones.html">Recomendaciones</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="educacion.html">Educación</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="perfil.html" class="perfil-link">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="recomendaciones-contenedor">
+      
+      <div class="encabezado-pagina">
+        <h1>Nuestros Consejos para tu Bienestar</h1>
+        <p>Sigue estas recomendaciones para mantenerte seguro y saludable durante los días de calor intenso.</p>
+      </div>
+      
+      <section class="recomendaciones">
+        <h2>Recomendaciones del Día</h2>
+        
+        <div class="tarjetas">
+          
+          <div class="tarjeta">
+            <img src="assets/images/water.png" alt="Hidratación constante">
+            <div class="tarjeta-contenido">
+              <h3 class="tarjeta-titulo">Hidrátate Siempre</h3>
+              <p class="tarjeta-texto">Bebe agua incluso si no tienes sed, tu cuerpo la necesita para regular su temperatura.</p>
+              <div class="calificacion">
+                <button onclick="calificar(this, true)" aria-label="Calificar 'Hidrátate Siempre' como útil">Útil</button>
+                <button onclick="calificar(this, false)" aria-label="Calificar 'Hidrátate Siempre' como no útil">No útil</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tarjeta">
+            <img src="assets/images/gorra.png" alt="Gorra y lentes para evitar el sol directo">
+            <div class="tarjeta-contenido">
+              <h3 class="tarjeta-titulo">Protégete del Sol</h3>
+              <p class="tarjeta-texto">Usa sombrero de ala ancha, lentes de sol con protección UV y aplica bloqueador solar.</p>
+              <div class="calificacion">
+                <button onclick="calificar(this, true)" aria-label="Calificar 'Protégete del Sol' como útil">Útil</button>
+                <button onclick="calificar(this, false)" aria-label="Calificar 'Protégete del Sol' como no útil">No útil</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tarjeta">
+            <img src="assets/images/run.png" alt="Persona corriendo con señal de prohibido">
+            <div class="tarjeta-contenido">
+              <h3 class="tarjeta-titulo">Evita el Esfuerzo Físico</h3>
+              <p class="tarjeta-texto">No realices actividad física intensa al aire libre durante las horas de mayor calor.</p>
+              <div class="calificacion">
+                <button onclick="calificar(this, true)" aria-label="Calificar 'Evita el Esfuerzo Físico' como útil">Útil</button>
+                <button onclick="calificar(this, false)" aria-label="Calificar 'Evita el Esfuerzo Físico' como no útil">No útil</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tarjeta">
+            <img src="assets/images/Quemadura.jpg" alt="Brazo con quemadura solar">
+            <div class="tarjeta-contenido">
+              <h3 class="tarjeta-titulo">Cuida tu Piel</h3>
+              <p class="tarjeta-texto">Usa bloqueador solar con factor de protección alto para evitar quemaduras dolorosas.</p>
+              <div class="calificacion">
+                <button onclick="calificar(this, true)" aria-label="Calificar 'Cuida tu Piel' como útil">Útil</button>
+                <button onclick="calificar(this, false)" aria-label="Calificar 'Cuida tu Piel' como no útil">No útil</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tarjeta">
+            <img src="assets/images/Playa.webp" alt="Playa con sol intenso">
+            <div class="tarjeta-contenido">
+              <h3 class="tarjeta-titulo">Cuidado en la Playa</h3>
+              <p class="tarjeta-texto">Evita la playa en las horas centrales del día, cuando el calor y la radiación son más intensos.</p>
+              <div class="calificacion">
+                <button onclick="calificar(this, true)" aria-label="Calificar 'Cuidado en la Playa' como útil">Útil</button>
+                <button onclick="calificar(this, false)" aria-label="Calificar 'Cuidado en la Playa' como no útil">No útil</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="recomendaciones-personalizadas">
+        <h2>Recomendaciones Personalizadas</h2>
+        <p class="subtitulo">Consejos basados en tu ubicación y perfil de riesgo.</p>
+        <div id="recomendaciones-personalizadas" class="tarjetas">
+          <p class="texto-placeholder">Inicia sesión o activa tu ubicación para ver recomendaciones personalizadas.</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Urban Heat Alert | Políticas de privacidad | Términos de uso</p>
+  </footer>
+
+ <script src="assets/scripts/recomendaciones.js"></script>
+ <script src="assets/scripts/main.js"></script>
+ <script src="assets/scripts/modo-oscuro.js"></script>
+</body>
+</html>

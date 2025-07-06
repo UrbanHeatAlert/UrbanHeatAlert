@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #d32f2f, #ff8c00);
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.perfil-contenedor {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+.perfil-navegacion {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.btn-volver,
+.btn-cambiar {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-volver:hover,
+.btn-cambiar:hover {
+  background-color: black;
+  color: white;
+}
+
+.seccion-principal .titulo {
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.rectangulo {
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.imagen-perfil {
+  flex-basis: 150px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.imagen-perfil img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #fbc02d;
+  object-fit: cover;
+}
+
+.datos-perfil {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-bloque {
+  width: 100%;
+}
+
+.info-bloque h2 {
+  font-size: 1.3rem;
+  color: #d32f2f;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.dato-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  font-size: 1rem;
+}
+
+.etiqueta {
+  font-weight: bold;
+  color: #555;
+}
+
+.valor {
+  color: #000;
+  text-align: right;
+}
+
+.interruptor-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.interruptor-checkbox {
+  display: none;
+}
+.interruptor-etiqueta {
+  display: block;
+  width: 44px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 12px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+.interruptor-etiqueta::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+.interruptor-checkbox:checked + .interruptor-etiqueta {
+  background-color: #28a745;
+}
+.interruptor-checkbox:checked + .interruptor-etiqueta::before {
+  transform: translateX(20px);
+}
+
+.selector-idioma {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.control-idioma {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#idioma {
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.cambiar {
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: #FBC02D;
+  color: black;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cambiar:hover {
+  background-color: #f9a825;
+}
+
+@media (max-width: 768px) {
+  .rectangulo {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  .datos-perfil {
+    text-align: center;
+  }
+  .dato-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.75rem 0;
+  }
+  .valor {
+    text-align: center;
+  }
+}
+
+body.modo-oscuro {
+  background: linear-gradient(to bottom, #333, #555);
+  color: #eee;
+}
+
+body.modo-oscuro .seccion-principal .titulo {
+  color: #eee;
+}
+
+body.modo-oscuro .rectangulo {
+  background-color: #444;
+  color: #eee;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.modo-oscuro .info-bloque h2 {
+  color: #fbc02d;
+  border-bottom-color: #666;
+}
+
+body.modo-oscuro .etiqueta {
+  color: #ddd;
+}
+
+body.modo-oscuro .valor {
+  color: #eee;
+}
+
+body.modo-oscuro .btn-volver,
+body.modo-oscuro .btn-cambiar {
+  background-color: #555;
+  color: #eee;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+body.modo-oscuro .btn-volver:hover,
+body.modo-oscuro .btn-cambiar:hover {
+  background-color: #333;
+  color: #fbc02d;
+}
+
+body.modo-oscuro .selector-idioma label {
+  color: #ddd;
+}
+
+body.modo-oscuro #idioma {
+  background-color: #555;
+  color: #eee;
+  border-color: #777;
+}
+
+body.modo-oscuro .cambiar {
+  background-color: #fbc02d;
+  color: #333;
+}
+
+body.modo-oscuro .cambiar:hover {
+  background-color: #e0a800;
+}
+
+

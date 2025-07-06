@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Heat Alert</title>
+
+    <!-- Fuente letra -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+     <!-- Icono de pestaña -->
+    <link rel="icon" href="assets/images/UrbanHeatAlert_Logo.png" type="image/png">
+
+    <link rel="stylesheet" href="assets/styles/inicio.css">
+</head>
+<body>
+    <div class="container">
+        <!--Logo -->
+        <div class="logo">
+            <img src="assets/images/UrbanHeatAlert_Logo.png" alt="Urban Heat Alert Logo">
+        </div>
+       
+        <h2>Urban Heat Alert</h2>
+        
+        <!-- Sección de Inicio de Sesión -->
+         <div id="form-section">
+            <div id="login-section">
+                <h3>Iniciar Sesión</h3>
+                <form onsubmit="login(event)">
+                <input type="text" id="username" placeholder="Email o teléfono" required />
+                <input type="password" id="password" placeholder="Contraseña" required />
+                <button class="btn" type="submit">Iniciar Sesión</button>
+
+                <p style="text-align:center; margin: 10px 0;" id="forgot-password-btn" onclick="showForgotPassword()">¿Olvidaste tu contraseña?</p>
+                <div class="options">
+                    <button onclick="showRegister()">Registrarse</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Conectar con Redes Sociales (solo en inicio de sesión) -->
+        <div class="social-login">
+            <button class="social-btn facebook" onclick="socialLogin('Facebook')">
+                <img src="assets/images/facebook-icon.png" alt="Facebook Logo" class="social-icon">
+            </button>
+            <button class="social-btn google" onclick="socialLogin('Google')">
+                <img src="assets/images/google-icon.png" alt="Google Logo" class="social-icon">
+            </button>
+        </div>
+    </div>
+
+    <!-- Sección de Registro -->
+    <div id="register-section" style="display:none;">
+        <h3>Registrarse</h3>
+        <input type="text" id="full-name" placeholder="Nombre completo" required />
+        <input type="text" id="register-username" placeholder="Email o teléfono" required />
+        <input type="text" id="edad" placeholder="Edad" required />
+        <input type="password" id="register-password" placeholder="Contraseña" required />
+        <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required />
+        <button class="btn" onclick="register()">Registrarse</button>
+        <div class="options">
+            <button onclick="showLogin()">Iniciar Sesión</button>
+        </div>
+    </div>
+
+    <!-- Sección de Recuperación de Contraseña -->
+    <div id="forgot-password-section" style="display:none;">
+        <h3>Recuperar Contraseña</h3>
+        <p>Elige cómo te gustaría recibir el código para restablecer tu contraseña:</p>
+        <button class="btn" onclick="sendCode('sms')">Enviar código por SMS</button>
+        <button class="btn" onclick="sendCode('email')">Enviar código por Email</button>
+        <div class="options">
+            <button onclick="showLogin()">Volver al inicio de sesión</button>
+        </div>
+    </div>
+
+    <p class="message" id="message"></p>
+</div>
+</div>
+
+<script src="assets/scripts/inicio.js"></script>
+
+</body>
+</html>

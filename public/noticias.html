@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Heat Alert - Noticias</title>
+  <link rel="icon" href="assets/images/UrbanHeatAlert_Logo.png" type="image/png">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/noticias.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/images/UrbanHeatAlert_Logo.png" alt="Logo Urban Heat Alert">
+      </div>
+
+      <button class="menu-hamburguesa" aria-label="Abrir menú">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="menu.html">Inicio</a></li>
+        <li><a href="alertas.html">Alertas</a></li>
+        <li><a href="recomendaciones.html">Recomendaciones</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="educacion.html">Educación</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="perfil.html" class="perfil-link">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="noticias">
+      
+      <div class="noticias-header">
+        <h1>Últimas Noticias</h1>
+        <p>Mantente al día con la información más reciente sobre el clima, alertas y consejos de salud en tu región.</p>
+      </div>
+
+      <div class="carousel">
+
+        <a href="#" class="noticia-enlace">
+          <article class="noticia-tarjeta">
+            <img src="assets/images/Noticia1.png" alt="Ciudad con cielo anaranjado por el calor">
+            <div class="tarjeta-contenido">
+              <p class="tarjeta-meta">
+                <span class="categoria">Clima</span> | <time datetime="2025-07-05">5 de Julio, 2025</time>
+              </p>
+              <h3 class="tarjeta-titulo">SENAMHI advierte sobre temperaturas récord en la costa norte</h3>
+              <p class="tarjeta-extracto">Se esperan picos de hasta 38°C en las regiones de Piura y Tumbes durante la próxima semana, instando a la población a tomar precauciones.</p>
+            </div>
+          </article>
+        </a>
+
+        <a href="#" class="noticia-enlace">
+          <article class="noticia-tarjeta">
+            <img src="assets/images/Noticia2.png" alt="Persona bebiendo agua para prevenir deshidratación">
+            <div class="tarjeta-contenido">
+              <p class="tarjeta-meta">
+                <span class="categoria">Salud</span> | <time datetime="2025-07-04">4 de Julio, 2025</time>
+              </p>
+              <h3 class="tarjeta-titulo">EsSalud publica guía para evitar el golpe de calor este verano</h3>
+              <p class="tarjeta-extracto">La entidad de salud ha lanzado una guía práctica con consejos sobre hidratación, vestimenta y horarios para evitar la exposición al sol.</p>
+            </div>
+          </article>
+        </a>
+
+        <a href="#" class="noticia-enlace">
+          <article class="noticia-tarjeta">
+            <img src="assets/images/Noticia3.png" alt="Mapa del Perú mostrando zonas de calor">
+            <div class="tarjeta-contenido">
+              <p class="tarjeta-meta">
+                <span class="categoria">Alertas</span> | <time datetime="2025-07-03">3 de Julio, 2025</time>
+              </p>
+              <h3 class="tarjeta-titulo">Lima Metropolitana en alerta naranja por alta sensación térmica</h3>
+              <p class="tarjeta-extracto">Los distritos del este de Lima son los más afectados, con sensaciones térmicas que podrían superar los 35°C, según expertos.</p>
+            </div>
+          </article>
+        </a>
+
+      </div>
+
+      <div class="VerMas">
+        <button class="btn_VerMas">Ver más noticias</button>
+      </div>
+
+    </section>
+  </main>
+  
+  <footer>
+      <p>&copy; 2025 Urban Heat Alert | Políticas de privacidad | Términos de uso</p>
+  </footer>
+
+  <script src="assets/scripts/noticias.js"></script>
+  <script src="assets/scripts/main.js"></script>
+  <script src="assets/scripts/modo-oscuro.js"></script>
+</body>
+</html>

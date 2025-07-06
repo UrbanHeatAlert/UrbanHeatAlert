@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Perfil - Urban Heat Alert</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/cambiar_perfil.css">
+</head>
+<body>
+
+<div class="perfil-contenedor">
+  
+  <div class="perfil-navegacion">
+    <button class="btn-volver" onclick="window.location.href='perfil.html'">← Volver</button>
+    <button class="btn-contacto" onclick="window.location.href='contacto_emergencia.html'">Contacto de Emergencia →</button>
+  </div>
+
+  <main class="seccion-principal">
+    <header class="header">
+      <h1 class="titulo">EDITAR PERFIL</h1>
+    </header>
+
+    <div class="rectangulo">
+      
+      <div class="imagen-perfil">
+        <img src="assets/images/profile.png" alt="Imagen de perfil">
+        </div>
+      
+      <form class="formulario">
+        
+        <div class="grupo-formulario">
+          <label for="nombre-completo">Nombre completo:</label>
+          <input type="text" id="nombre-completo" placeholder="Ingresa tu nombre" required>
+        </div>
+
+        <div class="formulario-grid">
+          <div class="grupo-formulario">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" placeholder="Tu edad" min="1">
+          </div>
+          <div class="grupo-formulario">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" placeholder="Ej: 987654321">
+          </div>
+        </div>
+        
+        <div class="grupo-formulario">
+          <label for="ubicacion">Ubicación:</label>
+          <input type="text" id="ubicacion" placeholder="Ej: Lima, Perú">
+        </div>
+
+        <div class="grupo-formulario">
+          <label for="email">Correo:</label>
+          <input type="email" id="email" placeholder="tu.correo@ejemplo.com" required>
+        </div>
+
+        <div class="grupo-formulario">
+          <label for="contrasena">Nueva Contraseña (opcional):</label>
+          <input type="password" id="contrasena" placeholder="Dejar en blanco para no cambiar">
+        </div>
+        
+        <div class="grupo-formulario">
+          <label for="confirmar-contrasena">Repetir Contraseña:</label>
+          <input type="password" id="confirmar-contrasena" placeholder="Repite la nueva contraseña">
+        </div>
+
+        <div class="boton-formulario">
+          <button type="button" onclick="guardarCambios()">Guardar Cambios</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+</div>
+
+<script src="assets/scripts/cambiar_perfil.js"></script>
+
+</body>
+</html>
